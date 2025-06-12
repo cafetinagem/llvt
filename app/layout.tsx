@@ -2,6 +2,8 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
+import FacebookPixel from "@/components/FacebookPixel"
+import UTMify from "@/components/UTMify"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <FacebookPixel />
+        <UTMify />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
